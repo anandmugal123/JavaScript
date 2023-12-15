@@ -86,20 +86,38 @@ let ct=0
 
 // })
 const books = [
-    { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
-    { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 },
-    { title: 'Book Three', genre: 'History', publish: 1999, edition: 2007 },
-    { title: 'Book Four', genre: 'Non-Fiction', publish: 1989, edition: 2010 },
-    { title: 'Book Five', genre: 'Science', publish: 2009, edition: 2014 },
-    { title: 'Book Six', genre: 'Fiction', publish: 1987, edition: 2010 },
-    { title: 'Book Seven', genre: 'History', publish: 1986, edition: 1996 },
-    { title: 'Book Eight', genre: 'Science', publish: 2011, edition: 2016 },
-    { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
+    { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 ,price:750},
+    { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 ,price:1000},
+    { title: 'Book Three', genre: 'History', publish: 1999, edition: 2007,price:1000 },
+    { title: 'Book Four', genre: 'Non-Fiction', publish: 1989, edition: 2010,price:1500 },
+    { title: 'Book Five', genre: 'Science', publish: 2009, edition: 2014,price:1200 },
+    { title: 'Book Six', genre: 'Fiction', publish: 1987, edition: 2010,price:1400 },
+    { title: 'Book Seven', genre: 'History', publish: 1986, edition: 1996,price:1800 },
+    { title: 'Book Eight', genre: 'Science', publish: 2011, edition: 2016,price:1000 },
+    { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 ,price:800},
   ];
 
-//   const FAV= books.filter((books)=>books.genre==='History');
-//   console.log(FAV)
-const FAV=books.filter((pb)=>{
-    return pb.edition>='2000' && pb.genre==='Science'}
-    );
-console.log(FAV);
+// //   const FAV= books.filter((books)=>books.genre==='History');
+// //   console.log(FAV)
+// const FAV=books.filter((pb)=>{
+//     return pb.edition>='2000' && pb.genre==='Science'}
+//     );
+// console.log(FAV);
+ 
+// const num=[1,2,3,4,5,6,7,8,9,10]
+// const newnumber=num
+//                    .map((num)=>num*10)
+//                    .map((num)=>num+1);
+
+// console.log(newnumber);
+
+    
+// const newnumber=num.reduce((acc,crval)=>acc+crval,0)
+// console.log(newnumber)
+
+// Reduce Function
+const subTotal=books.reduce(function(acc,crrval){
+  return acc+crrval.price
+},0);
+
+console.log(`Your subTotal of you cart is ${subTotal}`);
