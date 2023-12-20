@@ -1,0 +1,38 @@
+<!-- SelectUnorderListfrominput -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: slategray;">
+    <button onclick="myFunction()" style="color: rgb(97, 240, 233);border-radius: 25px;margin-left: 95px;" >Try it</button>
+    <input type="text" id="myText" placeholder="Enter the value" style="width: 300px;height: 45px;background-color: lightblue;border-radius: 25px;margin-top: 100px;margin-left: 100px;">
+    <ul id="list"></ul>
+    <button style="background-color: green; border-radius: 25px;margin-left: 200px;" onclick="showImage()">show</button>
+    <button style="background-color: red;border-radius: 25px;margin-left: 200px;" onclick="hideImage()">hide</button>
+    <img style="display: none;" id ="hello" src="ASSETS/OIP.jpg" style="width: 200px;border-radius: 25px;" alt="img">
+   <script>
+
+    function showImage(){
+        document.getElementById('hello').style.display="block";
+     }
+     function hideImage(){
+        document.getElementById('hello').style.display="none";
+     }
+   function myFunction() {
+     let y=document.getElementById("myText").value;
+     var x = document.createElement("li");
+     let h=document.createTextNode(y);
+     x.appendChild(h)
+     document.getElementById("list").appendChild(x);
+     
+     
+     
+     //document.body.appendChild(x);
+   }
+   </script>
+ </body>  
+
+</html>
